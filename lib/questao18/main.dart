@@ -1,11 +1,12 @@
-import 'endereco.dart';
+import 'playlist.dart';
 
 void main() {
-  Endereco e1 = Endereco('Rua das Flores', 100, 'Centro', 'Maringá', 'PR', 87010000);
-  Endereco e2 = Endereco('Av. Paulista', 1500, 'Bela Vista', 'São Paulo', 'SP', 01310100);
-  Endereco e3 = Endereco('Rua XV de Novembro', 250, 'Centro', 'Curitiba', 'PR', 80020310);
+  Musica m1 = Musica('Bohemian Rhapsody', 'Queen', 354);
+  Musica m2 = Musica('Hotel California', 'Eagles', 391);
+  Musica m3 = Musica('Stairway to Heaven', 'Led Zeppelin', 482);
 
-  e1.exibirEndereco();
-  e2.exibirEndereco();
-  e3.exibirEndereco();
+  Playlist p = Playlist('Clássicos do Rock', m1, m2, m3);
+
+  p.exibirPlaylist();
+  p.tocarPlaylist();
 }
