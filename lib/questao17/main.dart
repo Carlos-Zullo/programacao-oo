@@ -1,24 +1,17 @@
-import 'contador.dart';
+import 'semaforo.dart';
 
 void main() {
-  Contador c1 = Contador(0);
-  Contador c2 = Contador(10);
+  Semaforo s = Semaforo('vermelho', 5);
 
-  print('=== Contador 1 ===');
-  c1.exibirValor();
-  c1.incrementar();
-  c1.incrementar();
-  c1.incrementar();
-  c1.decrementar();
-  c1.zerar();
-  c1.decrementar(); // tentativa de ir abaixo de 0
-  c1.exibirValor();
+  print('=== Estado Inicial ===');
+  s.exibirEstado();
 
-  print('=== Contador 2 ===');
-  c2.exibirValor();
-  c2.decrementar();
-  c2.decrementar();
-  c2.incrementar();
-  c2.zerar();
-  c2.exibirValor();
+  print('=== Simulação ===');
+  // Simula 3 ciclos completos (5+4+2 = 11 ticks por ciclo, 3 ciclos = 33 ticks)
+  for (int i = 0; i < 33; i++) {
+    s.reduzirTempo();
+  }
+
+  print('=== Estado Final ===');
+  s.exibirEstado();
 }
