@@ -1,18 +1,12 @@
-import 'lampada.dart';
+import 'carro.dart';
 
 void main() {
-  Lampada l = Lampada();
+  Motor m1 = Motor(150, 'Flex');
+  Motor m2 = Motor(300, 'Turbo');
 
-  l.exibirEstado();
-  l.ligar();
-  l.desligar();
-  l.ligar();
-  l.desligar();
-  l.ligar();
-  l.desligar();
-  l.ligar();
-  l.desligar();
-  l.ligar(); // 5ª ligação — queima aqui
-  l.exibirEstado();
-  l.ligar(); // tentativa após queimar
+  Carro c1 = Carro('Civic', m1);
+  Carro c2 = Carro('Mustang', m2);
+
+  c1.exibirCarro();
+  c2.exibirCarro();
 }
