@@ -1,11 +1,13 @@
-import 'data.dart';
+import 'pedido.dart';
+import '../questao06/produto.dart';
  
 void main() {
-  Data d1 = Data(1, 1, 2000);
-  Data d2 = Data(15, 6, 1995);
-  Data d3 = Data(29, 3, 2026);
+  Produto p1 = Produto(1, 'Teclado Mecânico', 350.00, 2);
+  Produto p2 = Produto(2, 'Monitor 24"', 1200.00, 1);
  
-  d1.exibirData();
-  d2.exibirData();
-  d3.exibirData();
+  Pedido ped1 = Pedido(1001, p1, 2);
+  Pedido ped2 = Pedido(1002, p2, 1);
+ 
+  ped1.exibirPedido();
+  ped2.exibirPedido();
 }
